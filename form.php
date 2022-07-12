@@ -138,7 +138,7 @@
                 <input type="text" name="inputQUAL" class="form-control" id="inputQUAL" placeholder="Use comma to state if more than 1">
             </div>
             <div class="col-md-4">
-                <input type="file" name="qualification" class="form-control" id="inputGroupFile02">
+                <input type="file" name="qualification[]" class="form-control" id="inputGroupFile02" multiple>
             </div>
             <div class="sectionC">
                 SECTION C FINANCIAL INFORMATION

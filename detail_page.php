@@ -49,6 +49,9 @@
       <h4>CBSS BIO-DATA FORM</h4>
     </section>
     <main class="container">
+      <?php if($_GET["err_msg"]){
+        echo '<div class="alert alert-danger">'.$_GET["err_msg"].'</div>';
+      } ?>
         <h6 class="sectionA fw-bold">
           PERSONAL INFORMATION
         </h6>
@@ -419,7 +422,7 @@
 
 </html>
 <?php
-
+    
   } else {
     echo json_encode(array('success' => 0));
   }

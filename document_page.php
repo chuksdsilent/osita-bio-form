@@ -75,12 +75,7 @@
                 <img src="<?php echo $row["fslc_file"]; ?>" style="width: 300px; height: 300px; object-fit:cover" alt="">
 
             </div>
-            <div class="col-12">
-                Photograph
-            </div>
-            <div class="col-12">
-                Photograph
-            </div>
+           
             <div>
                 QUALIFICATIONS OBTAINED WHILE WORKING IN NASRDA
             </div>
