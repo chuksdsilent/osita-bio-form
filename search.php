@@ -18,7 +18,7 @@
   <section class="heading container">
     <div class="d-flex justify-content-between">
       <h5>CBSS STAFF SEARCH PAGE</h5>
-      <a href="/" class="">Logout</a>
+      <a href="http://localhost/bioform/admin_login.php" class="">Logout</a>
     </div>
   </section>
   <main class="container main_class">

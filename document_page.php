@@ -34,14 +34,17 @@
 
     ?>
         <main class="container mt-3">
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="detail_page.php?staff_id=<?php echo $staff_id; ?>">Details</a>
-                </li>
-                <li class="nav-item nav-tabs">
-                    <a class="nav-link" href="#">Documents</a>
-                </li>
-            </ul>
+            <div class="d-flex justify-content-between">
+                <ul class="nav nav-tabs container mt-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="detail_page.php?staff_id=<?php echo $staff_id; ?>">Details</a>
+                    </li>
+                    <li class="nav-item nav-tabs">
+                        <a class="nav-link" href="document_page.php?staff_id=<?php echo $staff_id; ?>">Documents</a>
+                    </li>
+                </ul>
+                <a href="http://localhost/bioform/admin_login.php" class="btn btn-danger">Logout</a>
+            </div>
             <p></p>
             <p></p>
             QUALIFICATIONS OBTAINED BEFORE RESUMING WORK AT NASRDA
@@ -75,9 +78,18 @@
                 <img src="<?php echo $row["fslc_file"]; ?>" style="width: 300px; height: 300px; object-fit:cover" alt="">
 
             </div>
-           
+
             <div>
                 QUALIFICATIONS OBTAINED WHILE WORKING IN NASRDA
+                <br />
+                <?php
+                $qualifications = unserialize($row["qualification"]);
+
+                foreach ($qualifications as $key => $value) {
+
+                    echo '<img src="' . $value . '" style="width: 300px; height: 300px; object-fit:cover" alt=""> <br />';
+                }
+                ?>
             </div>
         </main>
     <?php
