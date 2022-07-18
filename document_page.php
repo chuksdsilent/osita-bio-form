@@ -47,6 +47,9 @@
             </div>
             <p></p>
             <p></p>
+            <p>
+                <img src="<?php echo $row["passport"]; ?>" style="width: 200px; height: 200px; object-fit: cover;" alt="">
+            </p>
             QUALIFICATIONS OBTAINED BEFORE RESUMING WORK AT NASRDA
             </div>
             <p></p>
