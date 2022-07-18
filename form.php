@@ -24,6 +24,10 @@
         <div>CBSS BIO-DATA FORM</div>
     </section>
     <main class="container">
+
+        <?php if (isset($_GET["err_msg"])) {
+            echo '<div class="alert alert-danger">' . $_GET["err_msg"] . '</div>';
+        } ?>
         <form action="save_bio_data.php" method="post" class="row g-3" enctype="multipart/form-data">
             <div class=" sectionA">SECTION A PERSONAL INFORMATION
             </div>

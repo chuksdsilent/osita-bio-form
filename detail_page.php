@@ -53,9 +53,6 @@
       <h4>CBSS BIO-DATA FORM</h4>
     </section>
     <main class="container">
-      <?php if (isset($_GET["err_msg"])) {
-        echo '<div class="alert alert-danger">' . $_GET["err_msg"] . '</div>';
-      } ?>
       <h6 class="sectionA fw-bold">
         PERSONAL INFORMATION
       </h6>
@@ -149,9 +146,17 @@
           <?php echo $row["inputmaritalstatus"]; ?>
         </div>
       </div>
-      <div class="col-md-4 fw-bold">
-        <!-- Date input -->
-        Date Of Birth:
+
+      <div class="col mt-2 fw-bold">
+        Date of Birth
+      </div>
+      <div class="col mt-2">
+        <?php
+        $date = date_create($row["dob"]);
+        echo date_format($date, "d F, Y");
+
+        echo $row["inputmaritalstatus"]; ?>
+      </div>
       </div>
       <div class="sectionB">
       </div>
@@ -217,6 +222,7 @@
       </h5>
       <div class="col-12">
         <!-- Output result here -->
+        <?php echo $row["inputQUAL"]; ?>
 
       </div>
       <div class="sectionC">
@@ -322,7 +328,7 @@
           Date Of Regularization
         </div>
         <div class="col mt-2">
-          <!-- <?php echo date_format(date_create($row["datePresentAp"]), "d M, Y"); ?> -->
+          <!-- <?php echo date_format(date_create($row["dateofRegular"]), "d M, Y"); ?> -->
         </div>
       </div>
       <div class="col-md-4">

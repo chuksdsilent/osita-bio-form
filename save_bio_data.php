@@ -55,6 +55,7 @@ if (isset($_FILES["passport"]) && isset($_FILES["fslc_file"]) && isset($_FILES["
     $inputTraining = $_POST["inputTraining"];
     $FileNo = $_POST["FileNo"];
     $dob = $_POST["dob"];
+    $dateofRegular = $_POST["dateofRegular"];
 
     $sql = "
       INSERT INTO 
@@ -62,6 +63,7 @@ if (isset($_FILES["passport"]) && isset($_FILES["fslc_file"]) && isset($_FILES["
         SET 
           file_no = '$FileNo', 
           dob = '$dob', 
+          dateofRegular = '$dateofRegular', 
           inputfirstname = '$inputfirstname', 
           fslc_file = '$fslc_file', 
           qualification = '$qualification', 
