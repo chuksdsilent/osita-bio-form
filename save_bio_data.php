@@ -5,9 +5,6 @@ include_once("helpers.php");
 
 if (isset($_FILES["passport"]) && isset($_FILES["fslc_file"]) && isset($_FILES["ssce_file"]) && isset($_FILES["pg_file"]) && isset($_FILES["under_g_file"])) {
 
-  list($width, $height) = getimagesize($_FILES['passport']['tmp_name']);
-
-  if ($width <= 600 && $height <= 200) {
     $inputfirstname = $_POST["inputfirstname"];
     $inputothernames = $_POST["inputothernames"];
     $inputAddress = $_POST["inputAddress"];
@@ -115,10 +112,6 @@ if (isset($_FILES["passport"]) && isset($_FILES["fslc_file"]) && isset($_FILES["
     } else {
       echo "Error: " . $sql . "<br>" . $conn->error;
     }
-  } else {
-    // echo "height and width does not match";
-    header("location: http://localhost/bioform/form.php?err_msg=Passport width should be 2 inches and height 2 inches");
-  }
   //   $conn->close();
 } else {
   echo "file is not set";
